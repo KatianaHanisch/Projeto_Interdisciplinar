@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Css */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 30px 18%;
+  transition: ease 0.4s;
+  z-index: 1000;
+}
+header.sticky {
+  background: #f1f1f1;
+  padding: 10px 18%;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.sticky .logo {
+  color: #221314;
+}
+.sticky .navbar a {
+  color: #221314;
+}
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #221314;
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  color: #221314;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 4px;
+  transition: ease 0.4s;
+}
+.navbar a:hover {
+  background: #f1f1f1;
+  color: #221314;
+  box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+  border-radius: 4px;
+}
+#menu-icon {
+  color: #221314;
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+/* Primeira Divisão || Imagem de Início*/
+.inicio {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../Images/PaginaInicial/img-inicio.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #221314;
+  padding-top: 250px;
+  padding-bottom: 300px;
+}
+.container-inicio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* align-items: center;
+  justify-content: center; */
+  width: 100%;
+}
+.titulo-inicio-1 {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+.titulo-inicio-2 {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+.motivos-intercambio {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Segunda Divisão || Por que fazer um Intercâmbio*/
+.container-motivos {
+  background: url(../Images/PaginaInicial/img-importancia.jpg) no-repeat left;
+  background-size: 55%;
+  overflow: hidden;
+  padding: 100px 0;
+  margin-top: 100px;
+}
+.texto-container {
+  width: 55%;
+  float: right;
+  background-color: #f1f1f1;
+  padding: 110px;
+}
+.texto-container h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.texto {
+  font-size: 15px;
+  color: #545454;
+  line-height: 1.2;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+/* Terceira Divisão || Possíveis Destinos */
+.titulo-destinos {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 70px 50px 50px 50px;
+}
+.destinos-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 40px;
+}
+.grid-item {
+  background-color: #f1f1f1;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.grid-item:hover {
+  transform: translateY(-1%);
+}
+.imagem-card {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+.texto-card-container {
+  padding: 30px;
+}
+.titulo-card {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #220707;
+  margin-bottom: 1.5rem;
+}
+.texto-card {
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+  color: #545454;
+  margin-bottom: 2.5rem;
+}
+.botao-card {
+  display: block;
+  width: 150px;
+  padding: 12px;
+  font-size: 17px;
+  text-align: center;
+  color: #f1f1f1;
+  background-color: #000000;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+  font-style: none;
+  text-decoration: none;
+}
+/* Quarta Divisão || Galeria de Imagens */
+/* Falta fazer a parte Responsiva */
+.galeria-titulo {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-size: 3rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+.container-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  padding: 0 40px;
+  gap: 5px;
+  margin-bottom: 100px;
+}
+.galeria-item {
+  position: relative;
+}
+.img-galeria {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.altura-1 {
+  grid-row: span 1;
+}
+.altura-2 {
+  grid-row: span 2;
+}
+.largura-1 {
+  grid-column: span 1;
+}
+.largura-2 {
+  grid-column: span 2;
+}
+/* Quinta Divisão || Saiba Mais*/
+.saiba-mais {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../Images/PaginaInicial/img-final-background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align-last: center;
+}
+.primeiro-texto {
+  font-size: 2.4rem;
+  color: white;
+}
+.texto-2 {
+  max-width: 60rem;
+  text-align: center;
+  padding-bottom: 55px;
+  padding-top: 20px;
+  font-size: 18px;
+  color: white;
+  line-height: 1.1s;
+}
+.redes-sociais-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.redes-sociais a {
+  list-style: none;
+  text-decoration: none;
+}
+.box .btn {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.box .btn:hover {
+  width: 180px;
+  border-radius: 50px;
+}
+.box .btn .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  color: black;
+  transition: all 0.3s ease-out;
+}
+.instragram:hover .icon {
+  background: #cb1e58;
+}
+.facebook:hover .icon {
+  background: #4267b2;
+}
+.whatsapp:hover .icon {
+  background: #0c5710;
+}
+.btn .icon i {
+  font-size: 20px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.btn:hover .icon i {
+  color: #fff;
+}
+.btn span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 5px;
+  transition: all 0.5s ease-out;
+}
+.instragram:hover span {
+  color: #cb1e58;
+}
+.facebook:hover span {
+  color: #4267b2;
+}
+.whatsapp:hover span {
+  color: #0c5710;
+}
+/* Quinta Divisão || Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #000000;
+  color: #f1f1f1;
+}
+
+/* Slide */
+/* Slideshow container */
+.slide-768 {
+  display: none;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1400px) {
+  header {
+    padding: 17px 3%;
+    transition: 0.2s;
+  }
+  header.sticky {
+    padding: 10px 3%;
+    transition: 0.2s;
+  }
+  section {
+    padding: 80px 3%;
+    transition: 0.2s;
+  }
+  /* Responsividade da Segunda Divisão */
+  .container-motivos {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+  .texto-container {
+    width: 100%;
+  }
+  /* Responsividade de Destinos */
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1040px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .stick #menu-icon {
+    color: #221314;
+  }
+  .inicio {
+    height: 88vh;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 270px;
+    height: 120vh;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 30px;
+    transition: 0.5s all;
+  }
+  .navbar a {
+    display: block;
+    margin: 1.2rem 0;
+  }
+  .sticky .navbar a {
+    color: #221314;
+  }
+  .navbar a:hover {
+    color: #221314;
+  }
+  .open {
+    right: 0;
+  }
+  /* Responsividade Destinos - Fazer ajustes*/
+  .destinos-cards {
+    padding: 20px;
+  }
+  .container-cards {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-destinos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 30px;
+  }
+  .galeria-titulo {
+    font-size: 2rem;
+  }
+  .container-galeria {
+    padding: 0;
+  }
+  .galeria-de-imagens {
+    display: none;
+  }
+  .slide-768 {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Alterado, Iago (-.-) */
+  .container-motivos {
+    padding: 0;
+  }
+  .titulo-inicio-1 {
+    font-size: 2.5rem;
+  }
+  .titulo-inicio-2 {
+    font-size: 2rem;
+  }
+  .texto-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .texto-container {
+    padding: 30px;
+  }
+  /* Responsividade Destinos - Fazer ajustes*/
+  .container-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
